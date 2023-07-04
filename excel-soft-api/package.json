@@ -1,0 +1,18 @@
+{
+  "name": "excel-soft-api",
+  "version": "0.1.0",
+  "description": "This is an api for excelsoft jobs",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "nodemon src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "mongodb": "^4.9.0",
+    "nodemon": "^2.0.19"
+  }
+}

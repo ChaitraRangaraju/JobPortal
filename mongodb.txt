@@ -1,0 +1,159 @@
+db.jobs.find()
+
+//insert:
+db.jobs.insertOne({
+    jobName: "Software Engineer 2",
+    description: "Front end engineer",
+    skillset: [ 'React', 'html', 'CSS', 'Javascript' ],
+    education: "B.E/ B.Tech/M.Tech",
+    experiance: "0-4 years",
+    jobPostedOn: Date("<2022-04-15>"),
+    Location: 'Mysuru'
+    })
+
+    db.jobs.insertOne({
+    jobName: "Software Engineer 2",
+    description: "Back end engineer",
+    skillset: [ 'React','MongoDb','node.js', 'Javascript' ],
+    education: "B.E/ B.Tech/M.Tech",
+    experiance: "Above 4 years",
+    jobPostedOn: Date("<2022-04-15>"),
+    Location: 'Mysuru'
+    })
+
+    db.jobs.insertOne({
+    jobName: "Software Engineer 3",
+    description: "Back end engineer",
+    skillset: [ 'React','MongoDb','node.js', 'Javascript' ],
+    education: "B.E/ B.Tech/M.Tech",
+    experiance: "Above 4 years",
+    jobPostedOn: Date("<2022-04-15>"),
+    Location: 'Mysuru'
+    })
+
+    db.jobs.insertOne({
+    jobName: "Technical Lead",
+    description: "Manage and train technical person",
+    skillset: [ 'Technical Knowledge','leadership','communication','multitasking'],
+    education: "B.E/M.tech",
+    experiance: "Above 4 years of experience as Software developer/ Software Engineer",
+    jobPostedOn: Date("<2022-04-15>"),
+    Location: 'Mysuru'
+    })
+
+    db.jobs.insertOne({
+    jobName: "Manager",
+    description: "Manage a team",
+    skillset: [ 'Management','leadership','communication','multitasking' ],
+    education: "Bachelor's degree, MBA",
+    experiance: "Above 4 years",
+    jobPostedOn: Date("<2022-04-15>"),
+    Location: 'Mysuru'
+    })
+
+    db.jobs.insertOne({
+    jobName: "Software Engineer 3",
+    description: "Front end engineer",
+    skillset: [ 'React','Angular', 'html', 'CSS', 'Javascript' ],
+    education: "B.E/ B.Tech/M.Tech",
+    experiance: "Above 4 years",
+    jobPostedOn: Date("<2022-04-15>"),
+    Location: 'Mysuru'
+    })
+
+    db.jobs.insertOne({
+    jobName: "Advanced Java Developer",
+    description: "Java Programmer",
+    skillset: [ 'Java','Advanced Java','J2EE','spring','Hibernate','SQL','.net' ],
+    education: "B.E/M.Tech",
+    experiance: "2-4 years",
+    jobPostedOn: Date("<2022-04-15>"),
+    Location: 'Mysuru'
+    })
+    db.jobs.insertOne({
+    jobName: "Java Developer",
+    description: "Java Programmer",
+    skillset: [ 'Java','J2EE','spring','SQL' ],
+    education: "B.E/M.Tech",
+    experiance: "0 years",
+    jobPostedOn: Date("<2022-04-15>"),
+    Location: 'Mysuru'
+    })
+    db.jobs.insertOne({
+    jobName: "Software Engineer 3",
+    description: "Front end engineer",
+    skillset: [ 'React','Angular', 'html', 'CSS', 'Javascript' ],
+    education: "B.E/ B.Tech/M.Tech",
+    experiance: "Above 4 years",
+    jobPostedOn: Date("<2022-04-15>"),
+    Location: 'Mysuru'
+    })
+
+    db.jobs.insertOne({
+    jobName: "Analyst",
+    description: "Analyst Developer",
+    skillset: [ 'C#','ASP.net','Javascript','JQuery','Python','Java' ],
+    education: "B.E/M.Tech",
+    experiance: "2-4 years",
+    jobPostedOn: Date("<2022-04-15>"),
+    Location: 'Mysuru'
+    })
+    
+
+db.jobs.insertOne({
+    jobName: "Python Developer",
+    description: "Python Developer",
+    skillset: [ 'Python','XML','Web','Data Analysis' ],
+    education: "B.E/M.Tech",
+    experiance: "2-4 years",
+    jobPostedOn: Date("<2022-04-15>"),
+    Location: 'Mysuru'
+    })
+
+    //delete
+    db.jobs.remove({ _id: ObjectId("6308b1e6d8bc4ddae3fd3bc6")})
+    
+//filters
+db.jobs.createIndex( { name: "text", description: "text" } )
+
+db.jobs.find( { $text: { $search: "Java Developer" } } )
+db.jobs.find( { $text: { $search: "Analyst" } } )
+db.jobs.find({skillset:"Javascript"})
+db.jobs.find({jobName:"Software Engineer 2"})
+ db.jobs.find({$or:[{jobName:"Software Engineer 2"},{description:"Back end engineer"}]})
+ db.jobs.find({$and:[{jobName:"Software Engineer 2"},{description:"Back end engineer"}]})
+
+
+//Sort 
+db.jobs.find().sort({jobPostedOn:1})---ascending
+db.jobs.find().sort({jobPostedOn:-1})---descending
+
+//projecton
+db.jobs.find({},{"jobName":1,"Location":1,"jobPostedOn":1})----- id will be displayed default
+db.jobs.find({},{"_id":0,"jobName":1,"Location":1,"jobPostedOn":1})
+
+db.jobs.aggregate([
+    {$project:{_id:0,jobName:1,Location:1,jobPostedOn:1}}
+    ])
+
+db.jobs.aggregate([
+    {$project:{
+        _id:0,
+        "Name of the job":"$jobName",
+        Location:1,jobPostedOn:1}}
+    ])
+
+
+**db.jobs.find({jobName:"Software Engineer"},{"_id":0,"jobName":1,"Location":1,"jobPostedOn":1})
+
+//aggregation
+db.jobs.aggregate([
+    {$sort:{"jobPostedOn":1}}
+])
+
+db.jobs.aggregate([
+    
+    {$sort:{"jobPostedOn":1}},
+    {$limit:3}
+])
+

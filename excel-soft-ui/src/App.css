@@ -1,0 +1,282 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+html{
+  background-color:#00008B;
+}
+
+.container{
+    font-size: 20px;
+    border: 1px solid;
+    width: 350px;
+    margin: 15px;
+    float: left;
+    padding: 5px;
+    background-color: white;
+    padding-bottom: 10px;
+}
+
+.newcontainer{
+  border: 1px solid;
+    width: 1000px;
+    margin: 5% 5% 5% 13% ;
+    padding: 30px;
+    background-color: white;
+    margin-top: 160px;
+    font-size: 20px;
+}
+.parentContainer{
+  margin-left: 70px;
+    margin-right: 70px;
+    padding: 50px;
+    margin-top: 70px;
+}
+
+.linkStyle{
+  border: 1px solid black;
+  padding: 5px;
+  background-color: blue;
+  border-radius: 0.25em;
+  color: black;
+  text-decoration:none;
+  margin-left: 10px;
+    font-size: 18px;
+}
+
+.linkStyle1{
+  border: 1px solid black;
+  padding: 2px;
+  background-color: blue;
+  border-radius: 0.25em;
+  color: black;
+  text-decoration:none;
+  margin-left: 10px;
+    font-size: 18px;
+}
+
+button{
+  font-size: medium;
+  border: 1px solid black;
+  padding: 10px;
+  background-color: white;
+  border-radius: 0.25em;
+  color: black;
+  text-decoration:none;
+}
+
+.jobstyle{
+  padding: 0%;
+  margin: 10px;
+}
+
+.excel{
+  font-size: 16px;
+  text-align: justify;
+}
+
+.excel1{
+  font-size: 24px;
+  text-align: justify;
+}
+
+.imgstyle{
+  display: block;
+  margin-left: auto;
+    margin-right: auto;
+    float: right;
+}
+
+/* Wlcome */
+/*welcome page*/
+
+/* *{ 
+    margin: 0;
+    padding: 0;
+    transition: all .2s;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    outline: none;
+  }*/
+  
+  .header{
+    /*padding: 2rem 7%;*/
+    padding: 0px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--secondclr);
+    z-index: 1000;
+    background-color: white;
+  }
+  #logo{
+    color: black;
+    font-size: 2.0rem;
+  }
+  .navbar a{
+    color: black;
+    margin-left: 1.5rem;
+    font-size: 1.5rem;
+    position: relative;
+  }
+  .navbar a:hover{
+    color: orange;
+  }
+  .navbar a:after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: black;
+  transition: .5s;
+  height: 2px;
+  margin-top: 5px;
+  width: 0;
+  }
+  .navbar a:hover:after {
+    width: 100%;
+    color: orange;
+  }
+  .navbar.active{
+    top: 100%;
+  }
+  
+  
+  
+  .back{
+    padding: 3rem 7%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 5%;
+  
+    font-size: 40px;
+    color: white;
+    background-color:#00008B;
+    height:500px;
+  }
+  a{
+    padding: 1rem 3rem;
+    background: white;
+    font-size: 1.5rem;
+    color: black;
+    border-radius: 15px;
+    text-decoration:none;
+  }
+
+ 
+  
+  
+  #location{
+    margin-top: 4%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    background-color: white;
+    height: auto;
+  }
+  
+
+  .listpage{
+    padding: 3rem 7%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    
+    font-size: 40px;
+    color: white;
+    background-color:#00008B;
+    height:500px;
+  }
+
+/*Form application page*/
+
+#applyform{
+  margin-top: 75px;
+    text-align: left;
+   
+    background-color: white;
+    padding-left: 150px;
+    
+ 
+}
+.ptag{
+  color:red;
+  font-size: 15px;
+}
+input[type=text]{
+  width: 60%;
+  padding: 10px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  border: 1px solid #00008B;
+  
+  border-radius: 3px;
+  box-sizing: border-box;
+  
+  resize: vertical;
+}
+#btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  background-color: #00008B;
+}
+
+.hh3{
+  text-align: center;
+  font-size: 25px;
+  color: #00008B;
+  padding-right: 150px;
+}
+
+.imgstyle{
+  padding: 15px;
+}

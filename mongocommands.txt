@@ -1,0 +1,18 @@
+ db.jobs.insertOne({jobName: "Software Engineer 3", description: "Front end engineer"})
+
+
+
+
+db.jobs.insertOne({
+    jobName: "Software Engineer 3",
+    description: "Front end engineer",
+    skillset: ["React", "html", 'Javascript']
+})
+
+
+http://servername/api/jobs/list
+http://servername/api/jobs/detail?jobid=123
+http://servername/api/jobs/search?q=software%20engineer%203&location=mysore&yoe=4
+
+
+http://localhost:8080/api/jobs/list
